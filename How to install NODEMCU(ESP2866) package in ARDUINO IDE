@@ -1,0 +1,16 @@
+Open Arduino IDE and install the ESP8266 board package (File → Preferences → Additional Board Manager URLs add:
+
+"http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+
+
+Select Board: Tools → Board → NodeMCU 1.0 (ESP-12E Module) or your ESP8266 variant.
+
+Connect your ESP8266 via USB or serial adapter.
+
+Upload the code.
+
+💡 Note:
+
+For ESP-01, GPIO2 is the onboard LED pin.
+
+If you connect an external LED, use a resistor (220Ω–330Ω) between GPIO and LED.
