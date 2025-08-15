@@ -1,0 +1,45 @@
+CONNECTIONS :-
+| LED Color  | ESP8266 Pin | GPIO Number | Resistor | LED Leg Connections                  |
+| ---------- | ----------- | ----------- | -------- | ------------------------------------ |
+| Red        | D1          | GPIO5       | 220Ω     | Anode → Resistor → D1, Cathode → GND |
+| Yellow     | D2          | GPIO4       | 220Ω     | Anode → Resistor → D2, Cathode → GND |
+| Green      | D3          | GPIO0       | 220Ω     | Anode → Resistor → D3, Cathode → GND |
+
+
+
+// Define LED pins (change according to your wiring)
+#define RED_LED    D1   // GPIO5
+#define YELLOW_LED D2   // GPIO4
+#define GREEN_LED  D3   // GPIO0
+
+void setup() {
+  pinMode(RED_LED, OUTPUT);
+  pinMode(YELLOW_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+
+  // Start with all LEDs OFF
+  digitalWrite(RED_LED, LOW);
+  digitalWrite(YELLOW_LED, LOW);
+  digitalWrite(GREEN_LED, LOW);
+}
+
+void loop() {
+  // RED ON - Stop
+  digitalWrite(RED_LED, HIGH);
+  delay(3000); // 3 seconds
+  digitalWrite(RED_LED, LOW);
+
+  // GREEN ON - Go
+  digitalWrite(GREEN_LED, HIGH);
+  delay(3000); // 3 seconds
+  digitalWrite(GREEN_LED, LOW);
+
+  // YELLOW ON - Wait
+  digitalWrite(YELLOW_LED, HIGH);
+  delay(1000); // 1 second
+  digitalWrite(YELLOW_LED, LOW);
+}
+
+
+
+
