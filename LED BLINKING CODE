@@ -1,0 +1,13 @@
+// LED pin — use the onboard LED or external LED
+#define LED_PIN 2  // Onboard LED for most ESP8266 boards (GPIO2 / D4)
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);  // Set LED pin as output
+}
+
+void loop() {
+  digitalWrite(LED_PIN, LOW);   // Turn LED ON (LOW = ON for onboard LED)
+  delay(1000);                  // Wait 1 second
+  digitalWrite(LED_PIN, HIGH);  // Turn LED OFF (HIGH = OFF for onboard LED)
+  delay(1000);                  // Wait 1 second
+}
